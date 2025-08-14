@@ -274,18 +274,14 @@ export default function SalesPage() {
               </p>
             </div>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center px-3 py-3">
               <Button
                 size="lg"
                 className="bg-yellow-500 hover:bg-yellow-600 text-yellow-900 text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-4 sm:py-5 lg:py-6 font-bold max-w-xs sm:max-w-sm lg:max-w-md leading-tight"
                 onClick={() => handleCTAClick("Garantir Vaga R$ 9,90", "Pricing Principal")}
               >
-                <span className="text-center block px-3 py-2">
-                  SIM! QUERO TRANSFORMAR
-                  <br />
-                  MEU CONSULTÓRIO E FAZER
-                  <br />
-                  PARTE DA COMUNIDADE!
+                <span className="text-center block px-3 leading-7 py-3 my-0 mx-0">
+                  SIM! QUERO TRANSFORMA MEU CONSULTÓRIO 
                 </span>
               </Button>
             </div>
