@@ -40,33 +40,37 @@ export default function SalesPage() {
 
       {/* Hero Section */}
       <section
-        className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20"
+        className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-16 sm:py-20"
         data-section="hero"
       >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-blue-600 hover:bg-blue-700">Comunidade Exclusiva para Médicos</Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Médico: Cansado de Lutar por Pacientes e Tempo?{" "}
               <span className="text-blue-400">Transforme Seu Consultório</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
               Descubra a Comunidade ContentDoc: O Hub Estratégico e Colaborativo para Médicos que Buscam Gestão
               Inteligente, Previsibilidade de Pacientes e Remuneração Justa, Sem Abrir Mão da Qualidade de Vida.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-4"
+                className="bg-blue-600 hover:bg-blue-700 text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-5 w-full sm:w-auto max-w-xs sm:max-w-sm font-semibold leading-tight"
                 onClick={() => handleCTAClick("Transformar Consultório", "Hero Principal")}
               >
-                SIM! QUERO TRANSFORMAR MEU CONSULTÓRIO
+                <span className="text-center block px-2 py-1">
+                  SIM! QUERO TRANSFORMAR
+                  <br />
+                  MEU CONSULTÓRIO
+                </span>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white bg-transparent"
+                className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white bg-transparent w-full sm:w-auto text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-4"
                 onClick={() => trackButtonClick("Saiba Mais", "Hero Secundário")}
               >
                 Saiba Mais
@@ -80,10 +84,10 @@ export default function SalesPage() {
       <section className="py-16 bg-gray-50" data-section="pain-points">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">
               Você se Identifica com Algum Destes Desafios?
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 "Sente que seu consultório não cresce como você gostaria, apesar de todo o seu esforço e dedicação?",
                 "Está sobrecarregado(a) com a rotina, sem tempo para o marketing ou para a sua vida pessoal?",
@@ -92,15 +96,15 @@ export default function SalesPage() {
                 "Acha que marketing digital é complicado ou 'não é para médicos'?",
                 "Gostaria de ter mais previsibilidade financeira, mas não sabe por onde começar?",
               ].map((pain, index) => (
-                <Card key={index} className="p-6 border-l-4 border-l-red-500">
+                <Card key={index} className="p-4 sm:p-6 border-l-4 border-l-red-500">
                   <CardContent className="p-0">
-                    <p className="text-gray-700">{pain}</p>
+                    <p className="text-sm sm:text-base text-gray-700">{pain}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
             <div className="mt-12 text-center">
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
                 Se você respondeu <strong>"SIM"</strong> a qualquer uma dessas perguntas, você não está sozinho(a).
                 Milhares de médicos enfrentam esses mesmos desafios diariamente. A medicina evoluiu, mas a forma de
                 gerir um consultório particular muitas vezes não acompanhou.
@@ -125,10 +129,10 @@ export default function SalesPage() {
       <section className="py-16" data-section="benefits">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">
               O Que Você Vai Conquistar ao Fazer Parte da Comunidade ContentDoc
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {[
                 {
                   icon: <Target className="w-8 h-8 text-blue-600" />,
@@ -162,11 +166,11 @@ export default function SalesPage() {
                   description: "Tenha acesso direto a especialistas para tirar suas dúvidas em tempo real.",
                 },
               ].map((benefit, index) => (
-                <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
+                <Card key={index} className="p-4 sm:p-6 text-center hover:shadow-lg transition-shadow">
                   <CardContent className="p-0">
                     <div className="mb-4 flex justify-center">{benefit.icon}</div>
-                    <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                    <p className="text-gray-600">{benefit.description}</p>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3">{benefit.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-600">{benefit.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -270,13 +274,21 @@ export default function SalesPage() {
               </p>
             </div>
 
-            <Button
-              size="lg"
-              className="bg-yellow-500 hover:bg-yellow-600 text-yellow-900 text-xl px-12 py-6 font-bold"
-              onClick={() => handleCTAClick("Garantir Vaga R$ 9,90", "Pricing Principal")}
-            >
-              SIM! QUERO TRANSFORMAR MEU CONSULTÓRIO E FAZER PARTE DA COMUNIDADE CONTENTDOC!
-            </Button>
+            <div className="flex justify-center">
+              <Button
+                size="lg"
+                className="bg-yellow-500 hover:bg-yellow-600 text-yellow-900 text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-4 sm:py-5 lg:py-6 font-bold max-w-xs sm:max-w-sm lg:max-w-md leading-tight"
+                onClick={() => handleCTAClick("Garantir Vaga R$ 9,90", "Pricing Principal")}
+              >
+                <span className="text-center block px-3 py-2">
+                  SIM! QUERO TRANSFORMAR
+                  <br />
+                  MEU CONSULTÓRIO E FAZER
+                  <br />
+                  PARTE DA COMUNIDADE!
+                </span>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -329,18 +341,24 @@ export default function SalesPage() {
       {/* Final CTA */}
       <section className="py-16 bg-slate-900 text-white" data-section="final-cta">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Não Perca Tempo! Garante Sua Vaga Agora</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Não Perca Tempo! Garante Sua Vaga Agora</h2>
+          <p className="text-lg sm:text-xl mb-8 max-w-2xl mx-auto">
             Comece a construir o consultório que você sempre sonhou. Junte-se aos primeiros 100 membros da Comunidade
             ContentDoc.
           </p>
-          <Button
-            size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-xl px-12 py-6 font-bold"
-            onClick={() => handleCTAClick("Garantir Vaga Final", "CTA Final")}
-          >
-            GARANTIR MINHA VAGA POR R$ 9,90/MÊS
-          </Button>
+          <div className="flex justify-center">
+            <Button
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-4 sm:py-5 lg:py-6 font-bold max-w-xs sm:max-w-sm lg:max-w-md leading-tight"
+              onClick={() => handleCTAClick("Garantir Vaga Final", "CTA Final")}
+            >
+              <span className="text-center block px-3 py-2">
+                GARANTIR MINHA VAGA
+                <br />
+                POR R$ 9,90/MÊS
+              </span>
+            </Button>
+          </div>
         </div>
       </section>
 
