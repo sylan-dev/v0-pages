@@ -32,7 +32,14 @@ export default function SalesPage() {
               className="h-8 w-auto"
             />
           </div>
-          <Button variant="outline" size="sm" onClick={() => trackButtonClick("Login", "Header")}>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => {
+              trackButtonClick("Login", "Header")
+              window.open("https://contentdoc.themembers.com.br/login", "_blank")
+            }}
+          >
             Fazer Login
           </Button>
         </div>
@@ -281,7 +288,7 @@ export default function SalesPage() {
                 onClick={() => handleCTAClick("Garantir Vaga R$ 9,90", "Pricing Principal")}
               >
                 <span className="text-center block px-3 leading-7 py-3 my-0 mx-0">
-                  SIM! QUERO TRANSFORMA MEU CONSULTÓRIO 
+                  SIM! QUERO TRANSFORMA MEU CONSULTÓRIO
                 </span>
               </Button>
             </div>
