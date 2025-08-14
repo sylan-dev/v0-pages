@@ -35,6 +35,7 @@ export default function SalesPage() {
           <Button
             variant="outline"
             size="sm"
+            className="hover:scale-105 hover:shadow-md transition-all duration-200 cursor-pointer bg-transparent"
             onClick={() => {
               trackButtonClick("Login", "Header")
               window.open("https://contentdoc.themembers.com.br/login", "_blank")
@@ -65,7 +66,7 @@ export default function SalesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-5 w-full sm:w-auto max-w-xs sm:max-w-sm font-semibold leading-tight"
+                className="bg-blue-600 hover:bg-blue-700 hover:scale-105 hover:shadow-xl text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-5 w-full sm:w-auto max-w-xs sm:max-w-sm font-semibold leading-tight transition-all duration-300 cursor-pointer transform"
                 onClick={() => handleCTAClick("Transformar Consultório", "Hero Principal")}
               >
                 <span className="text-center block px-2 py-1">
@@ -77,7 +78,7 @@ export default function SalesPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white bg-transparent w-full sm:w-auto text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-4"
+                className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white hover:scale-105 hover:shadow-lg bg-transparent w-full sm:w-auto text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-4 transition-all duration-300 cursor-pointer transform"
                 onClick={() => trackButtonClick("Saiba Mais", "Hero Secundário")}
               >
                 Saiba Mais
@@ -173,7 +174,10 @@ export default function SalesPage() {
                   description: "Tenha acesso direto a especialistas para tirar suas dúvidas em tempo real.",
                 },
               ].map((benefit, index) => (
-                <Card key={index} className="p-4 sm:p-6 text-center hover:shadow-lg transition-shadow">
+                <Card
+                  key={index}
+                  className="p-4 sm:p-6 text-center hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
                   <CardContent className="p-0">
                     <div className="mb-4 flex justify-center">{benefit.icon}</div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-3">{benefit.title}</h3>
@@ -221,7 +225,10 @@ export default function SalesPage() {
                     "Receba as melhores referências e insights do mercado, sem precisar perder tempo pesquisando.",
                 },
               ].map((feature, index) => (
-                <Card key={index} className="p-6">
+                <Card
+                  key={index}
+                  className="p-6 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+                >
                   <CardContent className="p-0 flex items-start space-x-4">
                     <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <CheckCircle className="w-5 h-5 text-white" />
@@ -284,7 +291,7 @@ export default function SalesPage() {
             <div className="flex justify-center px-3 py-3">
               <Button
                 size="lg"
-                className="bg-yellow-500 hover:bg-yellow-600 text-yellow-900 text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-4 sm:py-5 lg:py-6 font-bold max-w-xs sm:max-w-sm lg:max-w-md leading-tight"
+                className="bg-yellow-500 hover:bg-yellow-600 hover:scale-110 hover:shadow-2xl text-yellow-900 text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-4 sm:py-5 lg:py-6 font-bold max-w-xs sm:max-w-sm lg:max-w-md leading-tight transition-all duration-300 cursor-pointer transform hover:animate-pulse"
                 onClick={() => handleCTAClick("Garantir Vaga R$ 9,90", "Pricing Principal")}
               >
                 <span className="text-center block px-3 leading-7 py-3 my-0 mx-0">
@@ -329,7 +336,10 @@ export default function SalesPage() {
                     "São ao vivo, via plataforma de videoconferência, com aulas, sessões de hotseat (análise de casos de membros) e perguntas e respostas. As gravações ficam disponíveis na área de membros.",
                 },
               ].map((faq, index) => (
-                <Card key={index} className="p-6">
+                <Card
+                  key={index}
+                  className="p-6 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+                >
                   <CardContent className="p-0">
                     <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
                     <p className="text-gray-600">{faq.answer}</p>
@@ -352,7 +362,7 @@ export default function SalesPage() {
           <div className="flex justify-center">
             <Button
               size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-4 sm:py-5 lg:py-6 font-bold max-w-xs sm:max-w-sm lg:max-w-md leading-tight"
+              className="bg-blue-600 hover:bg-blue-700 hover:scale-110 hover:shadow-2xl text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-4 sm:py-5 lg:py-6 font-bold max-w-xs sm:max-w-sm lg:max-w-md leading-tight transition-all duration-300 cursor-pointer transform"
               onClick={() => handleCTAClick("Garantir Vaga Final", "CTA Final")}
             >
               <span className="text-center block px-3 py-2">
@@ -382,13 +392,13 @@ export default function SalesPage() {
           </div>
           <div className="mt-4 pt-4 border-t border-slate-800 text-center text-sm text-gray-400">
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="#" className="hover:text-white">
+              <a href="#" className="hover:text-white hover:scale-105 transition-all duration-200 cursor-pointer">
                 Política de Privacidade
               </a>
-              <a href="#" className="hover:text-white">
+              <a href="#" className="hover:text-white hover:scale-105 transition-all duration-200 cursor-pointer">
                 Termos de Uso
               </a>
-              <a href="#" className="hover:text-white">
+              <a href="#" className="hover:text-white hover:scale-105 transition-all duration-200 cursor-pointer">
                 Contato
               </a>
             </div>
