@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Users, Clock, Target, TrendingUp, MessageCircle } from "lucide-react"
 import { trackButtonClick, trackConversion } from "@/lib/gtm"
 import { useGTMTracking } from "@/hooks/use-gtm-tracking"
+import Image from "next/image"
 
 export default function SalesPage() {
   useGTMTracking()
@@ -23,10 +24,13 @@ export default function SalesPage() {
       <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">C</span>
-            </div>
-            <span className="font-bold text-xl">ContentDoc</span>
+            <Image
+              src="/images/contentdoc-logo.png"
+              alt="ContentDoc Logo"
+              width={120}
+              height={32}
+              className="h-8 w-auto"
+            />
           </div>
           <Button variant="outline" size="sm" onClick={() => trackButtonClick("Login", "Header")}>
             Fazer Login
@@ -345,10 +349,13 @@ export default function SalesPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">C</span>
-              </div>
-              <span className="font-bold text-xl">ContentDoc</span>
+              <Image
+                src="/images/contentdoc-logo.png"
+                alt="ContentDoc Logo"
+                width={120}
+                height={32}
+                className="h-8 w-auto"
+              />
             </div>
             <div className="text-sm text-gray-400">ContentDoc - Transformando Consultórios em Negócios de Sucesso</div>
           </div>
